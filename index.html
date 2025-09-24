@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Header sektsioon kus esineb ka navigatsioon-->
   <header>
     <div class="header-top">
       <h1>HTML Õppeveeb</h1>
@@ -50,7 +52,7 @@
         <div class="text-note">Pildid lisatakse &lt;img&gt; elemendiga</div>
         <div class="text-note">Loendid: &lt;ul&gt; ja &lt;ol&gt;</div>
         <div class="text-note">Vormid kasutavad &lt;form&gt;, &lt;input&gt;, &lt;button&gt;</div>
-        <!-- duplicate for infinite scroll -->
+        <!-- Kaks korda et tekiks karuselli mulje -->
         <div class="text-note">HTML loob veebilehe struktuuri</div>
         <div class="text-note">Pealkirjad on &lt;h1&gt;–&lt;h6&gt;</div>
         <div class="text-note">Lõigud on &lt;p&gt; elemendis</div>
@@ -159,27 +161,31 @@
     </div>
   </footer>
 
+
+  <!-- Burger Menüü -->
   <script>
-  const burger = document.getElementById("burger");
-  const navLinks = document.getElementById("nav-links");
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
 
-
-  burger.addEventListener("click", (e) => {
-    e.stopPropagation(); 
-    navLinks.classList.toggle("show");
-  });
-
-  document.querySelectorAll("#nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("show");
+    // Klikides burger meüüle
+    burger.addEventListener("click", (e) => {
+      e.stopPropagation(); 
+      navLinks.classList.toggle("show");
     });
-  });
 
-  document.addEventListener("click", (e) => {
-    if (navLinks.classList.contains("show") && !navLinks.contains(e.target) && e.target !== burger) {
-      navLinks.classList.remove("show");
-    }
-  });
+    //Sulgeb menüü kui vajutatakse nav lingile
+    document.querySelectorAll("#nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+      });
+    });
+
+    // Sulgeb menüü kui klikitakse väljaspool menüüd
+    document.addEventListener("click", (e) => {
+      if (navLinks.classList.contains("show") && !navLinks.contains(e.target) && e.target !== burger) {
+        navLinks.classList.remove("show"); 
+      }
+    });
 </script>
 
   <script src="script.js"></script>
