@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Üheleheline Õppeleht</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1>HTML Õppeveeb</h1>
+      <nav id="navbar">
+        <div class="burger" id="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul id="nav-links">
+          <li><a href="#intro">Sissejuhatus</a></li>
+          <li><a href="#basics">Põhitõed</a></li>
+          <li><a href="#examples">Näited</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="intro">
+    <div class="sissejuhatus">
+      <h2>MIS ON HTML?</h2>
+      <p>
+        HTML (HyperText Markup Language) on standardne märgistuskeel, mida
+        kasutatakse veebilehtede loomisel. See võimaldab arendajatel
+        struktureerida sisu ja lisada elemente, nagu pealkirjad, lõigud,
+        pildid ja lingid.
+      </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/salY_Sm6mv4?si=vt2LlyRqj1uXxfEv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="basics">
+    <h2>HTML Põhitõed</h2>
+    <div class="slideshow">
+      <div class="carousel">
+        <div class="text-note">HTML loob veebilehe struktuuri</div>
+        <div class="text-note">Pealkirjad on &lt;h1&gt;–&lt;h6&gt;</div>
+        <div class="text-note">Lõigud on &lt;p&gt; elemendis</div>
+        <div class="text-note">Lingid luuakse &lt;a&gt; abil</div>
+        <div class="text-note">Pildid lisatakse &lt;img&gt; elemendiga</div>
+        <div class="text-note">Loendid: &lt;ul&gt; ja &lt;ol&gt;</div>
+        <div class="text-note">Vormid kasutavad &lt;form&gt;, &lt;input&gt;, &lt;button&gt;</div>
+        <!-- duplicate for infinite scroll -->
+        <div class="text-note">HTML loob veebilehe struktuuri</div>
+        <div class="text-note">Pealkirjad on &lt;h1&gt;–&lt;h6&gt;</div>
+        <div class="text-note">Lõigud on &lt;p&gt; elemendis</div>
+        <div class="text-note">Lingid luuakse &lt;a&gt; abil</div>
+        <div class="text-note">Pildid lisatakse &lt;img&gt; elemendiga</div>
+        <div class="text-note">Loendid: &lt;ul&gt; ja &lt;ol&gt;</div>
+        <div class="text-note">Vormid kasutavad &lt;form&gt;, &lt;input&gt;, &lt;button&gt;</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="examples">
+    <h2>HTML Näited</h2>
+    <div class="code-container">
+      <div class="code-box code-structure">
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="et"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt>Minu esimene veebileht&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gtTere tulemast!&lt;/h1&gt;
+    &lt;p&gtSee on minu esimene veebileht.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        <p class="code-comment">Struktuur: HTML5 dokument koos head ja body osaga</p>
+      </div>
+
+      <div class="code-box code-headings">
+        <pre><code>
+&lt;h1&gtSuurem pealkiri&lt;/h1&gt;
+&lt;h2&gtVeidi väiksem pealkiri&lt;/h2&gt;
+&lt;p&gtSee on lõik teksti.&lt;/p&gt;
+        </code></pre>
+        <p class="code-comment">Pealkirjad h1–h6 ja lõigud p elementidega</p>
+      </div>
+
+      <div class="code-box code-links">
+        <pre><code>
+&lt;a href="https://www.google.com" target="_blank"&gtMine Google’i&lt;/a&gt;
+        </code></pre>
+        <p class="code-comment">Lingid a elementidega, target="_blank" avab uues vahekaardis</p>
+      </div>
+
+      <div class="code-box code-images">
+        <pre><code>
+&lt;img src="pilt.jpg" alt="Kirjeldus pildist" width="300"&gt;
+        </code></pre>
+        <p class="code-comment">Pildi lisamine img elemendiga</p>
+      </div>
+
+      <div class="code-box code-lists">
+        <pre><code>
+&lt;ol&gt
+    &lt;li&gtEsimene punkt&lt;/li&gt
+    &lt;li&gtTeine punkt&lt;/li&gt
+&lt;/ol&gt
+
+&lt;ul&gt
+    &lt;li&gtEsimene punkt&lt;/li&gt
+    &lt;li&gtTeine punkt&lt;/li&gt
+&lt;/ul&gt
+        </code></pre>
+        <p class="code-comment">Järjestatud ja järjendamata nimekirjad</p>
+      </div>
+
+      <div class="code-box code-forms">
+        <pre><code>
+&lt;button&gtVajuta mind&lt;/button&gt
+&lt;form action="/submit" method="post"&gt
+    &lt;label for="name"&gtNimi:&lt;/label&gt
+    &lt;input type="text" id="name" name="name" placeholder="Sisesta oma nimi"&gt
+    &lt;input type="submit" value="Saada"&gt
+&lt;/form&gt
+        </code></pre>
+        <p class="code-comment">Vormid input ja button elementidega</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-hero">
+    <div class="overlay"></div>
+    <div class="contact-content">
+      <h2>Võta ühendust</h2>
+      <form>
+        <label for="name">Nimi</label>
+        <input type="text" id="name" name="name" placeholder="Sisesta oma nimi" required>
+        <label for="email">E-post</label>
+        <input type="email" id="email" name="email" placeholder="Sisesta oma e-posti aadress" required>
+        <label for="message">Tekst</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Saada</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="overlay"></div>
+    <div class="footer-content">
+      <img src="visiitkaart.png" alt="Kobe Business Card" class="footer-card">
+      <p>&copy; 2025 Georg Edward Piil</p>
+    </div>
+  </footer>
+
+  <script>
+  const burger = document.getElementById("burger");
+  const navLinks = document.getElementById("nav-links");
+
+
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation(); 
+    navLinks.classList.toggle("show");
+  });
+
+  document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (navLinks.classList.contains("show") && !navLinks.contains(e.target) && e.target !== burger) {
+      navLinks.classList.remove("show");
+    }
+  });
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
